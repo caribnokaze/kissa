@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+.title {
+  height: 310px;
+  background-image: url(../images/access/bg-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-shadow: 1px 1px 10px #4b2c14;
+}
+
+.title h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title p {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.main h2 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.main h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 20px;
+}
+
+.contact-finish h2 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-finish h2::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 20px;
+  position: relative; /* 親要素に対して相対的な位置を指定する */
+  left: 50%; /* 左端を中央に配置する */
+  transform: translateX(-50%); /* 左側に 50% のオフセットを適用することで中央に配置する */
+}
+
+.map {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: flex-start;
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  margin-top: 25px;
+}
+
+.contact {
+  width: 930px;
+  max-width: 90%;
+  margin-top: 75px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-area {
+  background-color: #eeeeee;
+  border: 1px solid #a3a3a3;
+  margin-top: 25px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-area dt {
+  width: 200px;
+  padding: 20px 0;
+  font-size:  15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.form-area dd {
+  width: calc(100% - 200px);
+}
+
+.form-area dt .required::after {
+  content: '必須';
+  font-size: 11px;
+  color: #eb4f32;
+  margin-left: 10px;
+}
+
+.form-area dd {
+  width: calc(100%-200px);
+  padding: 24px 0;
+}
+
+.input-text {
+  width: 100%;
+  max-width: 280px;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.select-box {
+  width: 200px;
+  height: 40px;
+}
+
+.radio-button {
+  display: block;
+  margin-top: 20px;
+}
+
+.radio-button:first-child {
+  margin-top: 0;
+}
+
+.radio-button input {
+  margin-right: 8px;
+}
+
+.message {
+  width: 100%;
+  height: 260px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.confirm-text {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.button-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #f4dd64;
+  display: block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.submit-button:hover {
+  background-color: #d8b500;
+}
+
+.submit-button-send {
+  background-color: #f4dd64;
+  display: block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+  border: none;
+  margin-left: 30px;
+  margin-right: auto;
+}
+
+
+
+.return-button {
+  background-color: #64f4f4;
+  display: block;
+  min-width: 180px;
+  line-height: 48px;
+  border-radius: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 25px;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.submit-button-send:hover {
+  background-color: #d8b500;
+}
+
+.return-button:hover {
+  background-color: #42d5fa;
+}
+
+.footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 800px) {
+  .map,
+  .contact {
+    width: 500px;
+    margin-top: 45px;
+  }
+
+  .form-area dt,
+  .form-area dd {
+    width: 100%;
+  }
+
+  .form-area dd span {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .form-area dt {
+    padding-bottom: 0;
+  }
+
+  .submit-button, .return-button, .submit-button-send{
+    color: #000000;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .button-area {
+    display: block;
+    align-items: center;
+  }
+  
+  span {
+    display: inline-block;
+  }
+  .confirm-text {
+    text-align: left;
+  }
+
+}
